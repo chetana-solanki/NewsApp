@@ -2,7 +2,7 @@ import './App.css';
 import { useState } from 'react';
 import News from './Component/News';
 import Navbar from './Component/Navbar';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 
 
@@ -10,7 +10,7 @@ function App() {
 
   const [country, setCountry] = useState("in"); // default India
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div>
         <Navbar setCountry={setCountry} country={country} />
         <Routes>
@@ -28,7 +28,7 @@ function App() {
         </Routes>
 
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

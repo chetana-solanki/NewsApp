@@ -12,8 +12,8 @@ export default function News(props) {
   const [loading, setLoading] = useState(true)
 
   const country = props.country
-  // const apiKey = "d16d1c498a7c4ccdb3daa62cc043ef99"
-  const apiKey = "pub_cc71781885ee4b1b8b6184e5c52fed67"
+  const apiKey = "pub_3d90db77cd644112a47a8a9bf7bf97b0"
+  // const apiKey = "pub_cc71781885ee4b1b8b6184e5c52fed67"
   const category = props.category
   const heading = props.heading
 

@@ -3,10 +3,6 @@ import NewsCard from './NewsCard'
 import Loading from './Loading'
 
 
-
-
-
-
 export default function News(props) {
   const [news, setNews] = useState(null)
   const [loading, setLoading] = useState(true)

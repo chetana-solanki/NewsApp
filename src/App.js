@@ -5,7 +5,6 @@ import Navbar from './Component/Navbar';
 import { HashRouter, Routes, Route } from "react-router-dom";
 
 
-
 function App() {
 
   const [country, setCountry] = useState("in"); // default India

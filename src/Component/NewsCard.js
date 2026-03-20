@@ -1,5 +1,7 @@
 import React from 'react';
 
+
+// Object to store country codes and their full country names
 const countries = {
     ae: "United Arab Emirates",
     ar: "Argentina",
@@ -19,9 +21,12 @@ const countries = {
     us: "United States"
 };
 
+
+// Function to shorten (truncate) long text to a given limit
 const truncateText = (text, limit) => {
-    if (!text) return "";
-    return text.length <= limit ? text : text.slice(0, limit) + "...";
+    if (!text) return "";                                                       // If text is null/undefined/empty, return empty string
+    return text.length <= limit ? text : text.slice(0, limit) + "...";          // If text length is within limit → return original text
+                                                                                // Otherwise cut text and add "..."
 };
 
 export default function NewsCard(props) {

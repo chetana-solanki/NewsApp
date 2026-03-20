@@ -34,19 +34,20 @@ export default function NewsCard(props) {
 
     return (
         <>
-            <h1 className="text-center text-5xl">
+            <h1 className="text-center text-3xl md:text-5xl px-2">
                 {countries[props.country]} - {props.heading} News
             </h1>
 
-            <div className="grid grid-cols-4 gap-6 mt-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-10 justify-items-center px-2 lg:px-6">
                 {articles.map((article, index) => (
                     <a
                         key={article.link || index}
                         href={article.link}
                         target="_blank"
                         rel="noopener noreferrer"
+                        className="w-full max-w-[22rem]"
                     >
-                        <div className="w-72 bg-slate-50 rounded-lg shadow-md overflow-hidden h-[370px]">
+                        <div className="bg-slate-50 rounded-lg shadow-md overflow-hidden h-full min-h-[370px]">
 
                             <img
                                 src={article.image_url}

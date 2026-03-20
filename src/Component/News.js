@@ -8,25 +8,24 @@ export default function News(props) {
   const [loading, setLoading] = useState(true)
 
   const country = props.country
-  const apiKey = "pub_3d90db77cd644112a47a8a9bf7bf97b0"
-  // const apiKey = "pub_cc71781885ee4b1b8b6184e5c52fed67"
+  // const apiKey = "pub_3d90db77cd644112a47a8a9bf7bf97b0"
+  const apiKey = "pub_cc71781885ee4b1b8b6184e5c52fed67"
   const category = props.category
   const heading = props.heading
 
   const api = `https://newsdata.io/api/1/latest?apikey=${apiKey}&country=${country}&category=${category}`
 
-  async function fetchNews() {
-    setLoading(true)
-    setNews(null)
-    const response = await fetch(api)
-    const newsData = await response.json()
-    // console.log(newsData)
-    setNews(newsData)
-    setLoading(false)
-  }
   useEffect(() => {
+    async function fetchNews() {
+      setLoading(true)
+      setNews(null)
+      const response = await fetch(api)
+      const newsData = await response.json()
+      setNews(newsData)
+      setLoading(false)
+    }
     fetchNews()
-  }, [country, category]);
+  }, [country, category, api]);
 
 
 
